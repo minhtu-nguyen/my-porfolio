@@ -189,7 +189,7 @@ nav.nav-full, .resume-button {
 #hero {
   height: 100vh;
   padding: 0;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 #hero .hero-scroll {
@@ -200,7 +200,7 @@ nav.nav-full, .resume-button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 40px;
+  height: 80px;
   width: 100%;
   background-color: transparent;
   margin-bottom: 1em;
@@ -224,70 +224,7 @@ nav.nav-full, .resume-button {
   width: 10px;
   height: 10px;
   border-radius: 1em;
-  -webkit-animation: trackBallSlide 5s linear infinite;
-          animation: trackBallSlide 5s linear infinite;
-}
-@-webkit-keyframes trackBallSlide {
-  0% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  6% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  14% {
-    opacity: 0;
-    transform: scale(0.4) translateY(40px);
-  }
-  15%, 19% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-20px);
-  }
-  28%, 29.99% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  30% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  36% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  44% {
-    opacity: 0;
-    transform: scale(0.4) translateY(40px);
-  }
-  45%, 49% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-20px);
-  }
-  58%, 59.99% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
-  60% {
-    opacity: 1;
-    transform: scale(0.9) translateY(-20px);
-  }
-  66% {
-    opacity: 1;
-    transform: scale(0.9) translateY(5px);
-  }
-  74% {
-    opacity: 0;
-    transform: scale(0.4) translateY(40px);
-  }
-  75%, 79% {
-    opacity: 0;
-    transform: scale(0.4) translateY(-20px);
-  }
-  88%, 100% {
-    opacity: 1;
-    transform: scale(1) translateY(-20px);
-  }
+  animation: trackBallSlide 5s linear infinite;
 }
 @keyframes trackBallSlide {
   0% {
@@ -585,8 +522,7 @@ section#projects .project-container .project-wrapper .project-image {
   overflow: hidden;
 }
 section#projects .project-container .project-wrapper .project-image img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: auto;
   opacity: 0.1;
@@ -694,7 +630,11 @@ footer p {
     width: 5em;
   }
   section#skills {
-    height: 30em;
+    height: 30em;    
+    background-image: url("/img/skills-background.webp");
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   section#skills .tech {
     gap: 0.5em;
@@ -861,4 +801,6 @@ footer p {
     width: 10.625em;
     right: -15em;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */
